@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorveteria 40Sabores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config.js"></script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-100 to-yellow-100 font-sans text-gray-800"
+  >
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav class="container mx-auto flex items-center justify-between p-4">
+        <h1
+          data-link="home"
+          class="text-xl font-bold text-yellow-400 cursor-pointer"
+          style="-webkit-text-stroke: 0.2px rgb(91, 50, 14)"
+        >
+          40Sabores🍦
+        </h1>
+
+        <button id="menuToggle" class="md:hidden text-yellow-400">☰</button>
+        <ul id="navMenu" class="hidden md:flex gap-6 font-medium">
+          <li>
+            <a data-link="home" class="hover:text-yellow-400">Home</a>
+          </li>
+          <li>
+            <a data-link="produtos" class="hover:text-yellow-400">Produtos</a>
+          </li>
+          <li><a data-link="lojas" class="hover:text-yellow-400">Lojas</a></li>
+          <li>
+            <a data-link="historia" class="hover:text-yellow-400">História</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="mobileMenu" class="md:hidden hidden bg-white shadow-md p-4">
+        <ul class="flex flex-col gap-4 font-medium">
+          <li><a data-link="home" class="hover:text-yellow-400">Home</a></li>
+          <li>
+            <a data-link="produtos" class="hover:text-yellow-400">Produtos</a>
+          </li>
+          <li><a data-link="lojas" class="hover:text-yellow-400">Lojas</a></li>
+          <li>
+            <a data-link="historia" class="hover:text-yellow-400">História</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section
+      id="home"
+      class="text-center py-20 px-4 bg-gradient-to-br from-yellow-100 to-pink-100"
+    >
+      <h2 class="text-4xl font-bold mb-4">Bem-vindo à 40Sabores!</h2>
+      <p class="text-lg mb-6">
+        A sorveteria mais divertida e saborosa da cidade!
+      </p>
+      <button
+        data-link="produtos"
+        class="[background-color:rgb(91_50_14)] text-white px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-black transition"
+      >
+        Ver produtos
+      </button>
+    </section>
+
+    <section id="produtos" class="py-20 px-4 container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Nossos Produtos</h2>
+      <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Sorvete de Morango</h3>
+          <p>Cremoso, refrescante e feito com frutas de verdade!</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Milkshake de Chocolate</h3>
+          <p>Gelado, doce e irresistível com chocolate belga.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Picolé de Manga</h3>
+          <p>Leve, tropical e ideal para os dias mais quentes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lojas" class="bg-white py-20 px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Nossas Lojas</h2>
+      <div class="container mx-auto text-center">
+        <p class="mb-4">
+          Confira abaixo a localização da loja mais próxima de você!
+        </p>
+        <div class="w-full h-96">
+          <iframe
+            class="w-full h-full rounded-xl"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.382922512655!2d-43.208657885033474!3d-22.902449685015364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5c5cb3a2d3%3A0x5794a4a5a1d62014!2sSorveteria!5e0!3m2!1spt-BR!2sbr!4v1615396978915!5m2!1spt-BR!2sbr"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="historia"
+      class="py-20 px-4 bg-gradient-to-tr from-pink-100 to-yellow-100"
+    >
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Nossa História</h2>
+        <p class="max-w-2xl mx-auto text-lg">
+          Fundada em 2001, a 40Sabores nasceu com o propósito de espalhar
+          alegria através de sabores incríveis e experiências inesquecíveis. Com
+          ingredientes frescos e um toque artesanal, conquistamos o coração dos
+          amantes de sorvete por todo o Brasil.
+        </p>
+      </div>
+    </section>
+
+    <footer class="bg-yellow-400 text-white text-center py-6">
+      <p>&copy; 2025 40Sabores. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        document
+          .querySelector("#produtos")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+
+      document.getElementById("menuToggle").addEventListener("click", () => {
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

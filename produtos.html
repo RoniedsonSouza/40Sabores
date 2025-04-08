@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos - 40Sabores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config.js"></script>
+  </head>
+  <body class="bg-white font-sans text-gray-800">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav class="container mx-auto flex items-center justify-between p-4">
+        <h1
+          data-link="home"
+          class="text-xl font-bold text-yellow-400 cursor-pointer"
+          style="-webkit-text-stroke: 0.2px rgb(91, 50, 14)"
+        >
+          40Sabores🍦
+        </h1>
+        <button id="menuToggle" class="md:hidden text-yellow-400">☰</button>
+        <ul id="navMenu" class="hidden md:flex gap-6 font-medium">
+          <li><a data-link="home" class="hover:text-yellow-400">Home</a></li>
+          <li>
+            <a data-link="produtos" class="hover:text-yellow-400">Produtos</a>
+          </li>
+          <li><a data-link="lojas" class="hover:text-yellow-400">Lojas</a></li>
+          <li>
+            <a data-link="historia" class="hover:text-yellow-400">História</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="mobileMenu" class="md:hidden hidden bg-white shadow-md p-4">
+        <ul class="flex flex-col gap-4 font-medium">
+          <li><a data-link="home" class="hover:text-yellow-400">Home</a></li>
+          <li>
+            <a data-link="produtos" class="hover:text-yellow-400">Produtos</a>
+          </li>
+          <li><a data-link="lojas" class="hover:text-yellow-400">Lojas</a></li>
+          <li>
+            <a data-link="historia" class="hover:text-yellow-400">História</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="container mx-auto py-12 px-4">
+      <h1 class="text-3xl font-bold mb-8 text-center">Nossos Produtos</h1>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-yellow-100 p-6 rounded-xl shadow">
+          <h2 class="text-xl font-semibold mb-2">Sorvete de Morango</h2>
+          <p>Feito com morangos frescos, super cremoso.</p>
+        </div>
+        <div class="bg-yellow-100 p-6 rounded-xl shadow">
+          <h2 class="text-xl font-semibold mb-2">Milkshake de Chocolate</h2>
+          <p>Feito com chocolate belga, irresistível!</p>
+        </div>
+        <div class="bg-yellow-100 p-6 rounded-xl shadow">
+          <h2 class="text-xl font-semibold mb-2">Picolé de Manga</h2>
+          <p>Leve, tropical, perfeito para refrescar.</p>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-yellow-400 text-white text-center py-6">
+      <p>&copy; 2025 40Sabores. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
